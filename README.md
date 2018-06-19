@@ -1,7 +1,4 @@
 
-![Flow diagram](https://4.bp.blogspot.com/-oNlrrT7z5NE/WwvaFw2TNqI/AAAAAAAABC8/LibASUHyk2o_kaQx7j-REC5ucPoqgPopQCLcBGAs/s1600/atd%2Bsubmit.jpg "Flow diagram")
-
-
 # Submit-atd.ps1
 PowerShell script that allows to upload files to a McAfee ATD Box
 
