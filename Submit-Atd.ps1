@@ -181,7 +181,7 @@ function Submit-Atd
                         };
 
         # Invoking the connection using the powerhsell invoke-restmethod
-        $login_url = "http://${Atd_host}/php/session.php"
+        $login_url = "https://${Atd_host}/php/session.php"
         try 
             {
             $response = Invoke-RestMethod -Uri $login_url -Method Get -Headers $auth_header
@@ -242,7 +242,7 @@ function Submit-Atd
         }
     Process
         {
-        $upload_url = "http://${Atd_host}/php/fileupload.php"
+        $upload_url = "https://${Atd_host}/php/fileupload.php"
         $Report = @()
         foreach($file in $Fullname)
             {
@@ -434,7 +434,7 @@ function Submit-Atd
         {
         # Close the connection to ATD
 
-        $logout_url = "http://${Atd_host}/php/session.php"
+        $logout_url = "https://${Atd_host}/php/session.php"
         $response = Invoke-RestMethod -Uri $logout_url -Method Delete -Headers $session_header 
 
         }
