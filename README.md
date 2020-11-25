@@ -1,6 +1,7 @@
 ___
 
     Date: 18th of November 2020
+    Last Time updated: 25th of November 2020
     Author: Carlos Munoz
     Email: carlos_munozgarrido@mcafee.com
 ___
@@ -23,7 +24,7 @@ Submit-atd.ps1 ia a Powershell cmdlet that allows getting the list of files to s
 
 You can check the execution policy with the command **Get-ExecutionPolicy**, its execution should show the value Unrestricted it can be changed with the command **Set-ExecutionPolicy -ExecutionPolicy Unrestricted**
 
-![McAfee ATD User Properties](/images/execution_policy.jpg)
+![Powershell Execution Policy](/images/execution_policy.jpg)
 
 ## Installation as a standalone tool
 
