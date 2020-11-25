@@ -24,7 +24,7 @@ Submit-atd.ps1 ia a Powershell cmdlet that allows getting the list of files to s
 
 You can check the execution policy with the command **Get-ExecutionPolicy**, its execution should show the value Unrestricted it can be changed with the command **Set-ExecutionPolicy -ExecutionPolicy Unrestricted**
 
-![Powershell Execution Policy](/images/execution_policy.jpg)
+![Powershell Execution Policy](/images/ps_execution_policy.jpg)
 
 ## Installation as a standalone tool
 
@@ -62,7 +62,7 @@ file-path|String
 
 * Let the timeout value to its default value
 
-![McAfee ATD Custom Reaction](/images/custom_reaction.jpg)
+![McAfee ATD Custom Reaction](/images/add_custom_reaction.jpg)
 
 * **Step 3** Integration done, a new Custom Reaction will be available, make a Real time search, select the device and apply the new custom reaction, indicating the atd ip address, user name, password and the full path of the file to be submitted.
 
