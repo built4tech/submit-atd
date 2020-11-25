@@ -16,9 +16,14 @@ Submit-atd.ps1 ia a Powershell cmdlet that allows getting the list of files to s
 
 * Create an user in McAfee ATD with Restfull access and multiple login property enable
 * Assign the correct profile to the user, as this profile will be the one that will be used by the Powershell cmdlet.
+
+![McAfee ATD User Properties](/images/user_properties.jpg)
+
 * The Powershell cmdlet submit-atd is not signed so be sure that the Powershell policy of the systems allows its execution.
 
 You can check the execution policy with the command **Get-ExecutionPolicy**, its execution should show the value Unrestricted it can be changed with the command **Set-ExecutionPolicy -ExecutionPolicy Unrestricted**
+
+![McAfee ATD User Properties](/images/execution_policy.jpg)
 
 ## Installation as a standalone tool
 
@@ -56,15 +61,32 @@ file-path|String
 
 * Let the timeout value to its default value
 
+![McAfee ATD Custom Reaction](/images/custom_reaction.jpg)
+
 * **Step 3** Integration done, a new Custom Reaction will be available, make a Real time search, select the device and apply the new custom reaction, indicating the atd ip address, user name, password and the full path of the file to be submitted.
 
 The result of the reaction will appear on the Action History (Menu / Action History), the column Action Status will indicate when the submition is done.
 
 McAfee ATD will show the result of the submition.
 
+**Applying custom reaction**
+![McAfee ATD launching custom reaction](/images/execute_reaction.jpg)
+
+**Introduce parameters**
+![McAfee ATD launching custom reaction](/images/atd_parameters.jpg)
+
+**Check Action History**
+![McAfee ATD launching custom reaction](/images/action_history.jpg)
+
+**McAfee ATD console, Analysis Report**
+![McAfee ATD launching custom reaction](/images/analysis_report.jpg)
+
+
 **How it Works**
 
 The custom reaction, downloads  atd-sumit.ps1 cmdlet from its repo and store it in a temporal location, then it imports it as a module, and finally sets the command line with the environment variables that will be passed from Mvision EDR when the reaction is executed.
+
+Tailor atd_submit.ps1, introducing the ip address of your ATD server as well as the username and password and you will get a more fluent execution of the reaction, not asking for so many parameters.
 
 ## Usage as a standalone tool
 
